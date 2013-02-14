@@ -1,0 +1,5 @@
+#!/bin/sh
+echo profile > /sys/class/drm/card0/device/power_method
+echo low > /sys/class/drm/card0/device/power_profile
+chmod a+w /sys/class/drm/card0/device/power_profile
+exit 0

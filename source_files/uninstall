@@ -1,0 +1,10 @@
+#!/bin/bash
+if ! which systemd > /dev/null; then
+	echo "You don't have systemd installed, this can't be installed!"
+	exit 1
+fi
+sudo systemctl disable gpuPower
+sudo rm /usr/lib/systemd/scripts/gpuPower
+sudo rm /usr/lib/systemd/system/gpuPower.service
+echo 'All Done!'
+exit 0
